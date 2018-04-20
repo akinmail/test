@@ -1,6 +1,6 @@
-import web3 from './web3';
+import web3 from './web3infura';
 
-//access our local copy to contract deployed on Ropsten testnet
+//access our local copy to contract deployed on rinkeby testnet
 //use your own contract address
 const address = '0x3c631df844c08c2a2b460aedab741d43d77eb53c';
 //use the ABI from your contract
