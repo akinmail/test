@@ -181,16 +181,11 @@ class App extends Component {
   <div className='nav-menu'>
     <div className='container-nav'>
       <ul>
-        <li>Bang Bang</li>
-        <li>Mexican-Chinese</li>
-        <li>Indo-Scandinavian</li>
-        <li>Polish-Korean</li>
+        
       </ul>
       <ul>
-        <li>Contact</li>
-        <li>Twitter</li>
-        <li>Facebook</li>
-        <li>Instagram</li>
+        <a href="mailto:akinyemi.akindele95@gmail.com"><li>Contact</li></a>
+        <a href="https://twitter.com/akinmail1"><li>Twitter</li></a>
       </ul>
     </div>
   </div>
