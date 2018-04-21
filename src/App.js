@@ -6,7 +6,10 @@ import web3 from './web3';
 import ipfs from './ipfs';
 import ethergram from './ethergram';
 import ethergraminfura from './ethergraminfura';
+import akinyemi from './akinyemi.jpg';
 var ethers = require('ethers');
+
+
 
 class App extends Component {
  
@@ -195,8 +198,8 @@ class App extends Component {
     <Form className="newPost" onSubmit={this.onSubmit.bind(this)}>
       <div className="container">
         <div className="post">
-          <img className="avatar" src="https://s3.amazonaws.com/codecademy-content/courses/jquery+jfiddle+test/feedster/profile-purple.svg"/>
-          <h3 className='name'>YOUR NAME HERE</h3>
+          <img className="avatar" src={akinyemi} height="40" width="40"/>
+          <h3 className='name'>Akinyemi Akindele @akinmail1</h3>
           <textarea className="postText" placeholder="What's on your mind?" value={this.state.value} onChange={this.handleTextChange.bind(this)}></textarea>
           <p className="wordcount"><span className='characters'>140</span> characters remaining</p>
           <p><input 
