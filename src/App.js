@@ -1,6 +1,6 @@
 import {Table, Grid, Button, Form } from 'react-bootstrap';
 import React, { Component } from 'react';
-//import logo from './logo.svg';
+import Metamaskdefined from './metamaskdefined';
 import './App.css';
 import web3 from './web3';
 import ipfs from './ipfs';
@@ -21,12 +21,17 @@ class App extends Component {
       gasUsed:'',
       txReceipt: '',
       textInput: '',
-      events: [] 
+      events: [],
+      isMetamask:false 
     };
 
  }
 
   componentWillMount(){
+    if (typeof ethergram == 'undefined') {
+    // You have a web3 browser! Continue below!
+      this.state.isMetamask=true;         
+  } 
         console.log(ethergram)
     console.log(ethergraminfura)
       ethergraminfura.events.gram({
@@ -145,9 +150,14 @@ class App extends Component {
    
   
     render() {
+      if(this.state.isMetamask){
+        return <Metamaskdefined /> 
+        
+      }else 
       
       return (
         <div className="App">
+        
           <div className="header">
       <div className="container">
         <div className="row">
@@ -227,3 +237,4 @@ class App extends Component {
 }
 
 export default App;
+

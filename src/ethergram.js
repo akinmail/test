@@ -88,4 +88,14 @@ const abi = [
 		"type": "event"
 	}
 ]
-export default new web3.eth.Contract(abi, address);
+var x;
+if (typeof window.web3 == 'undefined') {
+    // You have a web3 browser! Continue below!
+         alert("please install metamask chrome extension and make sure to signin if you already have it installed")
+         
+  } else{
+      
+	  x = new web3.eth.Contract(abi, address)
+  }
+
+export default x;

@@ -3,6 +3,16 @@
 
 import Web3 from 'web3';
 //overrides metamask v0.2 for our v 1.0
-const web3 = new Web3(window.web3.currentProvider);
+var web3;
+if (typeof window.web3 == 'undefined') {
+    // You have a web3 browser! Continue below!
+         alert("please install metamask chrome extension and make sure to signin if you already have it installed")
+         
+  } else{
+      web3 = new Web3(window.web3.currentProvider);
+
+  }
+
+
 
 export default web3;
